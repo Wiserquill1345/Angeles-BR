@@ -1,0 +1,306 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+.nav-titulo {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  color: white;
+  @include m.tablet {
+    margin-bottom: -2rem;
+  }
+
+  span {
+    font-weight: 700;
+    margin-top: -3rem;
+  }
+}
+.derecha {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include m.tablet {
+    align-items: flex-end;
+  }
+  .dark-mode-boton {
+    width: 3rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    filter: invert(100%);
+    &:hover {
+      cursor: pointer;
+    }
+    @include m.tablet {
+      margin-top: 0;
+    }
+  }
+}
+
+.barra {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 3rem;
+  @include m.tablet {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}
+
+// Menu
+.menu {
+  display: none;
+  @include m.tablet {
+    display: block;
+  }
+}
+.menu ul {
+  list-style: none;
+}
+.menu > ul > li {
+  display: inline-block;
+}
+.menu > ul > li:not(:last-child) {
+  margin-right: 40px;
+}
+.menu a {
+  text-transform: none;
+  text-transform: capitalize;
+  font-size: 2rem;
+  color: white;
+}
+.menu > ul > li > a {
+  padding: 24px 0;
+}
+.menu .dropdown {
+  position: relative;
+}
+.menu > ul > .dropdown > a {
+  padding-right: 15px;
+}
+.menu i {
+  font-size: 15px;
+  pointer-events: none;
+  user-select: none;
+  position: absolute;
+  color: v.$blanco;
+  top: calc(30% - 5px);
+}
+.menu .sub-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 230px;
+  padding: 15px 0;
+  background-color: v.$blanco;
+  box-shadow: 0 0 5px v.$negro;
+  z-index: 1;
+  transform-origin: top;
+  transform: scaleY(0);
+  visibility: hidden;
+  opacity: 0;
+}
+.menu .sub-menu-right {
+  left: 100%;
+  top: 0;
+}
+.menu li:hover > .sub-menu {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+  transition: all 0.5s ease;
+}
+.sub-menu {
+  span {
+    color: v.$negro;
+  }
+}
+.menu .sub-menu li {
+  padding: 10px 24px;
+  a {
+    display: block;
+  }
+}
+.menu .sub-menu .dropdown > a {
+  padding-right: 34px;
+  display: block; //remove if necessary
+  width: 100%;
+}
+.menu .sub-menu span {
+  background-image: linear-gradient(v.$negro, v.$negro);
+  background-size: 0 1px;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  transition: background-size 0.5s ease;
+}
+.menu .sub-menu li:hover > a > span {
+  background-size: 100% 1px;
+}
+.menu .sub-menu i {
+  transform: rotate(-90deg);
+  right: 24px;
+  color: v.$negro;
+}
+.close-menu-btn {
+  display: none;
+}
+
+.open-menu-btn {
+  display: none;
+}
+@media (max-width: 860px) {
+  .menu {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 450px;
+    max-width: 100%;
+    height: 100%;
+    background-color: v.$negro;
+    padding: 15px 30px 30px;
+    overflow-y: auto;
+    z-index: 1;
+    transform: translateX(100%);
+    ul{
+      width: 100%;
+    }
+  }
+  .menu.open{
+    transform: none;
+  }
+  .menu {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    margin-bottom: 25px;
+  }
+  .menu .close-menu-btn {
+    height: 35px;
+    width: 35px;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+  }
+  .menu .close-menu-btn::before,
+  .menu .close-menu-btn::after {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 2px;
+    background-color: v.$blanco;
+  }
+  .menu .close-menu-btn::before {
+    transform: rotate(45deg);
+  }
+  .menu .close-menu-btn::after {
+    transform: rotate(-45deg);
+  }
+  .menu > ul > li {
+    display: block;
+  }
+  .menu > ul > li:not(:last-child) {
+    margin-right: 0;
+  }
+  .menu li {
+    border-bottom: 1px solid v.$blanco;
+  }
+  .menu li:first-child {
+    border-top: 1px solid v.$blanco;
+  }
+  .menu > ul > li > a {
+    padding: 12px 0;
+  }
+  .menu > ul > .dropdown{
+    i{
+      margin-top: 5px;
+    }
+  }
+  .menu > ul > .dropdown > a {
+    padding-right: 34px;
+    display: inline-flex;
+  }
+  .menu i {
+    height: 34px;
+    width: 34px;
+    border: 1px solid white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: auto;
+    cursor: pointer;
+    top: 7px;
+  }
+  .menu .dropdown.active > i{
+    background-color: v.$grisOscuro;
+    transform: rotate(180deg);
+  }
+  .menu .sub-menu {
+    background-color: v.$negro;
+    position: static;
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+    padding: 0;
+    transition: none;
+    box-shadow: none;
+    width: 100%;
+    display: none;
+    i{
+      color: v.$blanco;
+      transform: none;
+      right: 0;
+    }
+    span{
+      color: v.$blanco;
+      background-image: none; 
+    }
+    li{
+      padding:10px 0 10px 24px;
+      .sub-menu{
+        li{
+          padding:10px 0 10px 24px;
+        }
+      }
+    }
+  }
+  .menu .dropdown.active > .sub-menu{
+    display: block;
+  }
+  .menu .sub-menu li:last-child{
+    border: none;
+  }
+  .menu .sub-menu a{
+    padding: 12px 0 12px 15px;
+  }
+  .menu .sub-menu .sub-menu a{
+    padding-left: 30px;
+  }
+  .open-menu-btn{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 44px;
+    cursor: pointer;
+    position: relative;
+    background-color: transparent;
+    border: none;
+  }
+  .open-menu-btn .line{
+    height: 2px;
+    width: 30px;
+    background-color: v.$blanco;
+    position: absolute;
+  }
+  .open-menu-btn .line-1{
+    transform: translateY(-8px);
+  }
+  .open-menu-btn .line-2{
+    transform: translateY(8px);
+  }
+}

@@ -1,0 +1,79 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+.contenedor-residencial{
+    h1{
+        font-size: 4rem !important;
+        font-weight: v.$black;
+        color:v.$black;
+    }
+    h2{
+        text-align: left;
+    }
+}
+.resumen-residencial{
+    margin: 0 5rem 0 5rem;
+    background-color: v.$gris;
+    border: 1px solid v.$gris;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    @include m.telefono{
+        @include m.grid(2,0);
+        justify-content: space-evenly;
+    }
+    @include m.tablet{
+        @include m.grid(3,0);
+        justify-content: space-evenly;
+    }
+}
+.contenido-modelos{
+    @include m.telefono{
+        @include m.grid(2,1rem);
+        @include m.tablet{
+            @include m.grid(3,2rem);
+        }
+
+    }
+
+    
+}
+.contenido-modelo{
+    display: flex;
+    flex-direction: column;
+    h2{
+        text-align: center;
+    }
+}
+.resumen-modelo{
+    flex: 1;
+    background-color: v.$blanco;
+    border: 3px solid v.$amarillo;
+    border-top-color: v.$blanco;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    .precio{
+        color:v.$verde;
+    }
+    ul:nth-child(1),ul:nth-child(2){
+        max-width: none;
+        li{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    ul:nth-child(2){
+        img{
+            width: 4rem;
+        }
+    }
+    .descripcion{
+        margin: -3rem 0;
+        display: block;
+        list-style: square;
+        p{
+            word-break:keep-all;
+        }
+    }
+}
