@@ -102,7 +102,7 @@ if (!isset($inicio)) {
                     <img class="dark-mode-boton" src="/build/img/dark-mode.svg">
                 </div>
             </div>
-            <?php echo $inicio ? "<h1>Venta/Renta de Casas y Departamentos</h1>" : ""; ?>
+            <?php echo $inicio ? "<h1>Venta/Renta de Casas y Departamentos en Mexicali</h1>" : ""; ?>
         </div>
     </header>
     <?php echo $contenido; ?>
