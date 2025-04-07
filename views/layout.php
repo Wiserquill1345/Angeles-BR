@@ -27,8 +27,7 @@ if (!isset($inicio)) {
                 </a>
                 <div class="derecha">
                     <button type="button" class="open-menu-btn">
-                        <span class="line line-1"></span>
-                        <span class="line line-2"></span>
+                        <span class="line line-1">menú</span>
                         <span class="line line-3"></span>
                     </button>
                     <nav class="menu">

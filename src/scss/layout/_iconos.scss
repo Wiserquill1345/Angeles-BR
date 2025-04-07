@@ -8,9 +8,11 @@
 .icono{
     text-align: center;
     justify-items: center;
+
     img{
         height: 10rem;
         width: 10rem;
+        max-width: 10rem;
     }
     h3{
         text-transform: uppercase;

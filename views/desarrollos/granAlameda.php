@@ -57,4 +57,6 @@
         </div>
     </section>
     <p class="flex">* Precio sujeto a cambios, pregunta por precio con equipamiento (loseta,pasto sintentico,aire acondicionado,etc).</p>
+    <p class="flex">* Todos los modelos pertenecen a Ruba Residencial</p>
+
 </main>
