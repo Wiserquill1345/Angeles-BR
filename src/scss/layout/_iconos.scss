@@ -7,11 +7,16 @@
 }
 .icono{
     text-align: center;
-    
+    justify-items: center;
     img{
         height: 10rem;
+        width: 10rem;
     }
     h3{
         text-transform: uppercase;
+    }
+    p{
+        text-align: justify;
+        word-break:keep-all;
     }
 }

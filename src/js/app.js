@@ -71,9 +71,6 @@ function mostrarMetodosContacto(e){
 
             <label for="fecha">Fecha</label>
             <input type="date" id="fecha" name="contacto[fecha]">
-
-            <label for="hora">Hora</label>
-            <input type="time" id="hora" min="09:00" max="18:00" name="contacto[hora]">
         `;
     }else{
         contactoDiv.innerHTML= `

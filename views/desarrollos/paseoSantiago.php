@@ -17,6 +17,9 @@
                 <source srcset="/build/img/pSantiago-asturias-1.jpg" type="image/jpeg">
                 <img loading="lazy" src="/build/img/pSantiago-asturias-1.jpg" alt="imagen del modelo">
             </picture>
+            <div class="precio-modelo">
+                <p class="precio">$5,000,000</p>
+            </div>
             <div class="resumen-modelo">
                 <ul class="iconos-caracteristicas">
                     <li>
@@ -71,6 +74,9 @@
                 <source srcset="/build/img/pSantiago-santiago-1.jpg" type="image/jpeg">
                 <img loading="lazy" src="/build/img/pSantiago-santiago-1.jpg" alt="imagen del modelo">
             </picture>
+            <div class="precio-modelo">
+                <p class="precio">$5,753,000</p>
+            </div>
             <div class="resumen-modelo">
                 <ul class="iconos-caracteristicas">
                     <li>
@@ -119,4 +125,5 @@
             </div>
         </div>
     </section>
+    <p class="flex">* Precio sujeto a cambios, pregunta por precio con equipamiento (loseta,pasto sintentico,aire acondicionado,etc).</p>
 </main>

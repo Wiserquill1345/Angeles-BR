@@ -8,7 +8,7 @@
     a,h1,h2,h3,h4{
         color:v.$gris;
     }
-    .anuncio, .resumen-propiedad, .resumen-modelo, .resumen-residencial{
+    .anuncio, .resumen-propiedad, .resumen-modelo, .resumen-residencial, .precio-modelo{
         background-color: v.$grisOscuro;
         border: 1px solid v.$grisOscuro;
         .precio{

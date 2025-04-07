@@ -5,9 +5,7 @@
   flex-direction: column;
   font-weight: 500;
   color: white;
-  @include m.tablet {
     margin-bottom: -2rem;
-  }
 
   span {
     font-weight: 700;
@@ -16,13 +14,9 @@
 }
 .derecha {
   display: flex;
-  flex-direction: column;
   align-items: center;
-
-  @include m.tablet {
-    align-items: flex-end;
-  }
   .dark-mode-boton {
+    margin-left: 6rem;
     width: 3rem;
     margin-top: 3rem;
     margin-bottom: 2rem;
@@ -30,29 +24,29 @@
     &:hover {
       cursor: pointer;
     }
-    @include m.tablet {
-      margin-top: 0;
-    }
   }
 }
 
 .barra {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   padding-top: 3rem;
-  @include m.tablet {
+  flex-direction: column;
+  align-self:center;
+  align-items: center;
+  @include m.tablet{
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-end;
+    align-self:auto;
   }
 }
 
 // Menu
 .menu {
   display: none;
+  padding-top: 1rem;
   @include m.tablet {
     display: block;
+    padding-right: 1rem;
   }
 }
 .menu ul {
@@ -67,7 +61,7 @@
 .menu a {
   text-transform: none;
   text-transform: capitalize;
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: white;
 }
 .menu > ul > li > a {
@@ -290,6 +284,7 @@
     position: relative;
     background-color: transparent;
     border: none;
+    padding-top: 1rem;
   }
   .open-menu-btn .line{
     height: 2px;

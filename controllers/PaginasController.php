@@ -55,7 +55,7 @@ class PaginasController{
             $mail->Port = $_ENV["EMAIL_PORT"];
 
             //Configurar el contenido del mail
-            $mail->setFrom("sebasmarti11@hotmail.com");
+            $mail->setFrom("angeles-br.com");
             $mail->addAddress("wiserquill@gmail.com", "El seba");
             $mail->Subject = "Tienes un Nuevo Mensaje";
 
@@ -77,7 +77,6 @@ class PaginasController{
                 $contenido .= "<p>Eligio ser contactado por Teléfono:</p>";
                 $contenido .= "<p>Telefono: " . $respuestas["telefono"] ."</p>";
                 $contenido .= "<p>Fecha Contacto: " . $respuestas["fecha"] ."</p>";
-                $contenido .= "<p>Hora: " . $respuestas["hora"] ."</p>";
             }else{
                 //Es email, entonces agregamos el campo de email
                 $contenido .= "<p>Eligio ser contactado por email:</p>";
@@ -109,5 +108,23 @@ class PaginasController{
     }
     public static function paseoSantiago(Router $router){
         $router->render("desarrollos/paseoSantiago");
+    }
+    public static function altaria(Router $router){
+        $router->render("desarrollos/altaria");
+    }
+    public static function camille(Router $router){
+        $router->render("desarrollos/camille");
+    }
+    public static function granAlameda(Router $router){
+        $router->render("desarrollos/granAlameda");
+    }
+    public static function quintaGranadaIII(Router $router){
+        $router->render("desarrollos/quintaGranadaIII");
+    }
+    public static function corceles(Router $router){
+        $router->render("desarrollos/corceles");
+    }
+    public static function palermo(Router $router){
+        $router->render("desarrollos/palermo");
     }
 }

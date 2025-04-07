@@ -14,7 +14,7 @@ if (!isset($inicio)) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Angeles Bienes Raices</title>
+    <title>Gascón Bienes Raices</title>
     <link rel="stylesheet" href="../build/css/app.css">
 </head>
 
@@ -23,11 +23,9 @@ if (!isset($inicio)) {
         <div class="contenedor contenido-header">
             <div class="barra">
                 <a href="/">
-                    <h2 class="nav-titulo">ANGELES <span>BIENESRAICES</span></h2>
+                    <h2 class="nav-titulo">GASCÓN <span>BIENESRAICES</span></h2>
                 </a>
                 <div class="derecha">
-                    
-                    <img class="dark-mode-boton" src="/build/img/dark-mode.svg">
                     <button type="button" class="open-menu-btn">
                         <span class="line line-1"></span>
                         <span class="line line-2"></span>
@@ -47,15 +45,53 @@ if (!isset($inicio)) {
                                             <li><a href="/desarrollos/monet"><span>Monet</span></a></li>
                                             <li><a href="/desarrollos/paseoSantiago"><span>Paseo de Santiago</span></a>
                                             </li>
+                                            <li><a href="/desarrollos/altaria"><span>Altaria</span></a>
+                                            </li>
+                                            <li><a href="/desarrollos/camille"><span>Camille</span></a>
+                                            </li>
+                                            <li><a href="/desarrollos/granAlameda"><span>Gran Alameda</span></a>
+                                            </li>
+                                            <li><a href="/desarrollos/quintaGranadaIII"><span>Quinta Granada III</span></a>
+                                            </li>
+                                            <li><a href="/desarrollos/palermo"><span>Palermo</span></a>
+                                            </li>
+                                            <li><a href="/desarrollos/corceles"><span>Corceles</span></a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <!--<li class="dropdown">
+                                        <a href="javascript:void(0)"><span>Corceles</span></a>
+                                        <i>▼</i>
+                                        <ul class="sub-menu sub-menu-right">
+                                            <li><a href="/desarrollos/monet"><span>Monet</span></a></li>
+                                            <li><a href="/desarrollos/paseoSantiago"><span>Paseo de Santiago</span></a>
+                                            </li>
+                                            <li><a href="/desarrollos/altaria"><span>Altaria</span></a>
+                                            </li>
+                                            <li><a href="/desarrollos/camille"><span>Camille</span></a>
+                                            </li>
+                                            <li><a href="/desarrollos/granAlameda"><span>Gran Alameda</span></a>
+                                            </li>
                                         </ul>
                                     </li>
                                     <li class="dropdown">
-                                        <a href="javascript:void(0)"><span>Ruba</span></a>
+                                        <a href="javascript:void(0)"><span>Palermo</span></a>
                                         <i>▼</i>
-                                    </li>
+                                        <ul class="sub-menu sub-menu-right">
+                                            <li><a href="/desarrollos/monet"><span>Monet</span></a></li>
+                                            <li><a href="/desarrollos/paseoSantiago"><span>Paseo de Santiago</span></a>
+                                            </li>
+                                            <li><a href="/desarrollos/altaria"><span>Altaria</span></a>
+                                            </li>
+                                            <li><a href="/desarrollos/camille"><span>Camille</span></a>
+                                            </li>
+                                            <li><a href="/desarrollos/granAlameda"><span>Gran Alameda</span></a>
+                                            </li>
+                                        </ul>
+                                    </li>-->
                                 </ul>
                             </li>
-                            <li><a href="/propiedades">Propiedades</a></li>
+                            <!-- <li><a href="/propiedades">Propiedades</a></li> -->
                             <li><a href="/nosotros">Nosotros</a></li>
                             <li><a href="/contacto">Contacto</a></li>
                             <?php if ($auth): ?>
@@ -63,20 +99,21 @@ if (!isset($inicio)) {
                             <?php endif; ?>
                         </ul>
                     </nav>
+                    <img class="dark-mode-boton" src="/build/img/dark-mode.svg">
                 </div>
             </div>
-            <?php echo $inicio ? "<h1>Venta de Casas y Departamentos exclusivos de lujo</h1>" : ""; ?>
+            <?php echo $inicio ? "<h1>Venta/Renta de Casas y Departamentos</h1>" : ""; ?>
         </div>
     </header>
     <?php echo $contenido; ?>
     <footer class="footer seccion">
         <div class="contenedor contenedor-footer">
             <nav class="navegacion">
-                <a href="/nosotros.html">Nosotros</a>
+                <a href="/nosotros">Nosotros</a>
                 <a href="/contacto">Contacto</a>
             </nav>
         </div>
-        <p class="copyright">Todos los derechos reservados <?php echo date("Y"); ?> &copy;</p>
+        <!-- <p class="copyright">Todos los derechos reservados <?php echo date("Y"); ?> &copy;</p> -->
     </footer>
     <script src="../build/js/bundle.min.js"></script>
 </body>

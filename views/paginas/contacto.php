@@ -7,9 +7,9 @@
             <p class="alerta exito"> <?php echo $mensaje; ?></p>;
     <?php }?>
     <picture>
-        <source srcset="build/img/destacada3.webp type/webp">
-        <source srcset="build/img/destacada3.jpg type/jpeg">
-        <img loading="lazy" src="build/img/destacada3.jpg" alt="Imagen Contacto">
+        <source srcset="build/img/encuentra.webp type/webp">
+        <source srcset="build/img/encuentra.jpg type/jpeg">
+        <img loading="lazy" src="build/img/encuentra.jpg" alt="Imagen Contacto">
     </picture>
 
     <h2>Llene el formulario de Contacto</h2>

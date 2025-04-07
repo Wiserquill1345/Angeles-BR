@@ -29,8 +29,9 @@
 .contenido-modelos{
     @include m.telefono{
         @include m.grid(2,1rem);
+        
         @include m.tablet{
-            @include m.grid(3,2rem);
+            grid-template-columns: repeat(auto-fit, minmax(min(100%/3, max(100%/4)), 1fr))
         }
 
     }
@@ -43,6 +44,34 @@
     h2{
         text-align: center;
     }
+    @include m.tablet{
+        &:last-child:nth-child(3n+1) {
+            grid-column-end: -2;
+        }
+        &:last-child:nth-child(3n+2) {
+            grid-column-end: -1;
+        }
+    }
+}
+.precio-modelo{
+    display: flex;
+    justify-content: center;
+    margin-bottom: -4rem;
+    background-color: v.$blanco;
+    border: 3px solid v.$amarillo;
+    border-top-color: v.$blanco;
+    border-bottom-color: v.$blanco;
+    .precio{
+        color:v.$verde;
+        font-size: 3rem;
+        font-weight: 700;
+    }
+    .no-disponible{
+        color: v.$rojo;
+        font-size: 3rem;
+        font-weight: 700;
+    }
+
 }
 .resumen-modelo{
     flex: 1;
@@ -52,9 +81,6 @@
     padding: 3rem;
     display: flex;
     flex-direction: column;
-    .precio{
-        color:v.$verde;
-    }
     ul:nth-child(1),ul:nth-child(2){
         max-width: none;
         li{

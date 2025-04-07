@@ -1,26 +1,36 @@
 <main class="contenedor seccion">
-    <h1>Mas Sobre Nosotros</h1>
+    <h1 class="bold">Mas Sobre Nosotros</h1>
     <?php
-        include "iconos.php";
+    include "iconos.php";
     ?>
 </main>
+<!--
 <section class="seccion contenedor">
+
     <h2>Casas y Depas en Venta</h2>
-
-
+    
     <?php
-    include "listado.php";
+    // include "listado-propiedades.php";
     ?>
-
     <div class="alinear-derecha">
         <a href="/propiedades" class="boton-verde">Ver Todas</a>
+    </div>
+</section> -->
+
+<section class="seccion contenedor">
+    <h2 class="bold">Nuevos modelos - Monet Residencial</h2>
+    <?php
+        include "listado-modelos.php";
+    ?>
+    <div class="alinear-derecha">
+        <a href="/desarrollos/monet" class="boton-verde">Ver Residencial</a>
     </div>
 </section>
 
 <section class="imagen-contacto">
     <h2>Encuentra la casa de tus sueños</h2>
     <p>Llena el formulario y un asesor se pondra en contacto a la brevedad</p>
-    <a href="contacto.html" class="boton-amarillo">Contactanos</a>
+    <a href="/contacto" class="boton-amarillo">Contactanos</a>
 </section>
 <!--
 <div class="contenedor seccion seccion-inferior">

@@ -37,6 +37,12 @@ $router->post("/contacto", [PaginasController::class,"contacto"]);
 //Zona publica - desarrollos
 $router->get("/desarrollos/monet", [PaginasController::class,"monet"]);
 $router->get("/desarrollos/paseoSantiago", [PaginasController::class,"paseoSantiago"]);
+$router->get("/desarrollos/altaria", [PaginasController::class,"altaria"]);
+$router->get("/desarrollos/camille", [PaginasController::class,"camille"]);
+$router->get("/desarrollos/granAlameda", [PaginasController::class,"granAlameda"]);
+$router->get("/desarrollos/quintaGranadaIII", [PaginasController::class,"quintaGranadaIII"]);
+$router->get("/desarrollos/palermo", [PaginasController::class,"palermo"]);
+$router->get("/desarrollos/corceles", [PaginasController::class,"corceles"]);
 
 //Login y autenticacion
 $router->get("/login",[LoginController::class, "login"]);

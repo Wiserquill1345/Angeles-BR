@@ -13,6 +13,9 @@
                 <source srcset="/build/img/monet-vernon-1.jpg" type="image/jpeg">
                 <img loading="lazy" src="/build/img/monet-vernon-1.jpg" alt="imagen del modelo">
             </picture>
+            <div class="precio-modelo">
+            <p class="precio">$4,021,500</p>
+            </div>
             <div class="resumen-modelo">
                 <ul class="iconos-caracteristicas">
                     <li>
@@ -62,6 +65,9 @@
                 <source srcset="/build/img/monet-giverny-1.jpg" type="image/jpeg">
                 <img loading="lazy" src="/build/img/monet-giverny-1.jpg" alt="imagen del modelo">
             </picture>
+            <div class="precio-modelo">
+                <p class="precio">$4,357,500</p>
+            </div>
             <div class="resumen-modelo">
                 <ul class="iconos-caracteristicas">
                     <li>
@@ -113,6 +119,9 @@
                 <source srcset="/build/img/monet-soleil-1.jpg" type="image/jpeg">
                 <img loading="lazy" src="/build/img/monet-soleil-1.jpg" alt="imagen del modelo">
             </picture>
+            <div class="precio-modelo">
+            <p class="precio">$3,937,500</p>
+            </div>
             <div class="resumen-modelo">
                 <ul class="iconos-caracteristicas">
                     <li>
@@ -158,4 +167,5 @@
             </div>
         </div>
     </section>
+    <p class="flex">* Precio sujeto a cambios, pregunta por precio con equipamiento (loseta,pasto sintentico,aire acondicionado,etc).</p>
 </main>
